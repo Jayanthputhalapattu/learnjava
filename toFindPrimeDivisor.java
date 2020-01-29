@@ -8,12 +8,12 @@ class sol{
 	public String isDiv(int r) {
 		int temp=0;
 		int ptemp = 0;
-		for (int i=1;i<=r;i++) {
+		for (int i=1;i<=r/2;i++) {
 			if (r%i==0) {
 				temp++;
 			}
 		}
-		count = temp;
+		count = temp+1;
 		for  (int i=1;i<=count;i++) {
 			if (count%i==0) {
 				ptemp++;
