@@ -8,12 +8,9 @@ public class ComparrInterface {
 	 l.add(222);
 	 l.add(2, 797);
 	 
-	 Comparator<Integer> c = (Integer i,Integer j) -> 
-			 return i%10>j%10?1:-1;
-		 }
-	 ;
+	
 	 
-	 Collections.sort(l,c);
+	 Collections.sort(l, ( i, j) ->  i%10>j%10?1:-1;));
 	 for (Integer i : l) {
 		 System.out.println(i);
 	 }
