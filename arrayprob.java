@@ -1,4 +1,9 @@
 import java.util.*;
+ class mException extends Exception {
+	public mException(String s) {
+	  super(s);
+	}
+}
 public class CCprob {
 public static void main(String args[]) {
 	
@@ -12,22 +17,34 @@ public static void main(String args[]) {
 		t[i] = sc.nextInt();
 	}
 	System.out.println("Enter k :");
-	int k = sc.nextInt();
-
-	
-	System.out.println();
-	
-	sc.close();
-	for (int i = 0;i<n;i++) {
-		for (int j = i;j<n;j++) {
-			int temp=0;
-			if (t[i] < t[j]) {
-				temp = t[i];
-			   t[i] = t[j];
-			   t[j] = temp;
+	int k ;
+	try {
+		k = sc.nextInt();
+		if (1<=k && k>=n) {
+			throw new mException("k must be less than length of array");
+		}
+		for (int i = 0;i<n;i++) {
+			for (int j = i;j<n;j++) {
+				int temp=0;
+				if (t[i] < t[j]) {
+					temp = t[i];
+				   t[i] = t[j];
+				   t[j] = temp;
+				}
 			}
 		}
+		System.out.println(t[k-1]);
 	}
-	System.out.println(t[k-1]);
+	catch(Exception e) {
+		System.out.println(e);
+	}
+   finally {
+	   sc.close();
+   }
+	
+
+	
+
+	
 }
 }
