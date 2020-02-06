@@ -33,7 +33,7 @@ public static void main(String args[]) {
 				}
 			}
 		}
-		System.out.println(t[k-1]);
+		System.out.println("output:"+t[k-1]);
 	}
 	catch(Exception e) {
 		System.out.println(e);
