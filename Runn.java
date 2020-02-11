@@ -1,15 +1,16 @@
-package dataStructures;
+package test;
 
-public class Runn {
-
-	public static void main(String[] args) {
-	 LinkedListtt l = new LinkedListtt();
-	 l.insert(20);
-	 l.insert(56);
-	 l.insert(65);
-	 
-	 l.display();
-
-	}
-
+public class Ruunner {
+    public static void main(String args[]) {
+    	LinkedList l = new LinkedList();
+    	l.insert(40);
+    	l.insert(25);
+    	l.insert(400);
+    	
+    	l.insertAt(2, 15);
+    	
+    	
+    	l.deleteAt(3);
+    	l.display();
+    }
 }
